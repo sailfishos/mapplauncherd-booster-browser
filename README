@@ -1,0 +1,7 @@
+This is a Sailfish OS Browser booster project
+
+Browser specific booster is required inorder to make browser
+boosting to work correctly with gecko.
+
+This is a fork of silica booster and parts that are not
+needed by browser and adds qt5embedwidget dependency.
