@@ -27,6 +27,7 @@
 #include "logger.h"
 #include "booster.h"
 #include <sys/socket.h>
+#include <unistd.h>
 
 int EventHandler::m_sighupFd[2];
 struct sigaction EventHandler::m_oldSigAction;
