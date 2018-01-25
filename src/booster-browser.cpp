@@ -72,34 +72,28 @@ bool BrowserBooster::receiveDataFromInvoker(int socketFd)
     // Use the default implementation if in boot mode
     // (it won't require QApplication running).
 
-    if (bootMode())
-    {
+    if (bootMode()) {
         return Booster::receiveDataFromInvoker(socketFd);
-    }
-    else
-    {
+    } else {
         // Setup the conversation channel with the invoker.
         setConnection(new Connection(socketFd));
 
         EventHandler handler(this);
         handler.runEventLoop();
 
-        if (!connection()->connected())
-        {
+        if (!connection()->connected()) {
             return false;
         }
 
         // Receive application data from the invoker
-        if(!connection()->receiveApplicationData(appData()))
-        {
+        if (!connection()->receiveApplicationData(appData())) {
             connection()->close();
             return false;
         }
 
         // Close the connection if exit status doesn't need
         // to be sent back to invoker
-        if (!connection()->isReportAppExitStatusNeeded())
-        {
+        if (!connection()->isReportAppExitStatusNeeded()) {
             connection()->close();
         }
 
