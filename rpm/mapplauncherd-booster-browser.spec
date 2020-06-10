@@ -2,7 +2,6 @@ Name:       mapplauncherd-booster-browser
 Summary:    Application launch booster for Silica on QtQuick2
 Version:    0.0.1
 Release:    1
-Group:      System/Applications
 License:    LGPLv2.1
 URL:        https://bitbucket.org/jolla/ui-mapplauncherd-booster-silica
 Source0:    %{name}-%{version}.tar.bz2
@@ -27,6 +26,7 @@ BuildRequires:  pkgconfig(gio-2.0)
 BuildRequires:  pkgconfig(gmodule-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(timed-qt5)
+BuildRequires:  systemd
 
 # Browser booster specific
 BuildRequires:  pkgconfig(qt5embedwidget)
@@ -53,8 +53,8 @@ make %{?jobs:-j%jobs}
 rm -rf %{buildroot}
 %qmake_install
 
-mkdir -p %{buildroot}/usr/lib/systemd/user/user-session.target.wants || true
-ln -s ../booster-browser.service %{buildroot}/usr/lib/systemd/user/user-session.target.wants/
+mkdir -p %{buildroot}%{_userunitdir}/user-session.target.wants || true
+ln -s ../booster-browser.service %{buildroot}%{_userunitdir}/user-session.target.wants/
 
 %pre
 groupadd -rf privileged
@@ -63,6 +63,6 @@ groupadd -rf privileged
 %defattr(-,root,root,-)
 %attr(2755, root, privileged) %{_libexecdir}/mapplauncherd/booster-browser
 %{_datadir}/booster-browser/*
-%{_libdir}/systemd/user/booster-browser.service
-%{_libdir}/systemd/user/user-session.target.wants/booster-browser.service
+%{_userunitdir}/booster-browser.service
+%{_userunitdir}/user-session.target.wants/booster-browser.service
 
