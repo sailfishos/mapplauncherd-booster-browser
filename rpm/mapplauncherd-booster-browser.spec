@@ -64,5 +64,5 @@ groupadd -rf privileged
 %attr(2755, root, privileged) %{_libexecdir}/mapplauncherd/booster-browser
 %{_datadir}/booster-browser/*
 %{_userunitdir}/booster-browser.service
+%{_userunitdir}/booster-browser@.service
 %{_userunitdir}/user-session.target.wants/booster-browser.service
-

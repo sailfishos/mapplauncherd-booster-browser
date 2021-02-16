@@ -22,6 +22,7 @@ qml.path = /usr/share/$${TARGET}/
 
 service.path = /usr/lib/systemd/user/
 service.files = data/$${TARGET}.service
+service.files += data/$${TARGET}@.service
 
 INSTALLS += target qml service
 
