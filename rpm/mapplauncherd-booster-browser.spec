@@ -2,7 +2,7 @@ Name:       mapplauncherd-booster-browser
 Summary:    Application launch booster for Silica on QtQuick2
 Version:    0.0.1
 Release:    1
-License:    LGPLv2.1
+License:    LGPLv2
 URL:        https://bitbucket.org/jolla/ui-mapplauncherd-booster-silica
 Source0:    %{name}-%{version}.tar.bz2
 BuildRequires:  pkgconfig(Qt5Core)
