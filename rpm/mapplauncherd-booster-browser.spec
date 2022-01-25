@@ -1,6 +1,6 @@
 Name:       mapplauncherd-booster-browser
 Summary:    Application launch booster for Sailfish Browser
-Version:    0.0.1
+Version:    0.1.3
 Release:    1
 License:    LGPLv2
 URL:        https://github.com/sailfishos/mapplauncherd-booster-browser
