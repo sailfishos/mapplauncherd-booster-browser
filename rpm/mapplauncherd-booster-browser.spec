@@ -60,6 +60,7 @@ groupadd -rf privileged
 
 %files
 %defattr(-,root,root,-)
+%license COPYING.LESSER
 %attr(2755, root, privileged) %{_libexecdir}/mapplauncherd/booster-browser
 %{_datadir}/booster-browser/*
 %{_userunitdir}/booster-browser.service
