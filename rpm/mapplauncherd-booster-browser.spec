@@ -1,5 +1,5 @@
 Name:       mapplauncherd-booster-browser
-Summary:    Application launch booster for Silica on QtQuick2
+Summary:    Application launch booster for Sailfish Browser
 Version:    0.0.1
 Release:    1
 License:    LGPLv2
@@ -37,7 +37,7 @@ Requires:  mapplauncherd >= 4.2.3
 Requires:  systemd-user-session-targets
 
 %description
-Application launch booster for Silica applications on QtQuick2
+%{summary}.
 
 %prep
 %autosetup -n %{name}-%{version}

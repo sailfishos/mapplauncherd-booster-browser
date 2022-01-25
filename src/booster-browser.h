@@ -18,8 +18,8 @@
 **
 ****************************************************************************/
 
-#ifndef BOOSTER_SILICA_H
-#define BOOSTER_SILICA_H
+#ifndef BOOSTER_BROWSER_H
+#define BOOSTER_BROWSER_H
 
 #include "eventhandler.h"
 #include "booster.h"
