@@ -1,10 +1,9 @@
 /***************************************************************************
 **
-** Copyright (C) 2011 Nokia Corporation and/or its subsidiary(-ies).
-** Copyright (C) 2014 Jolla Ltd.
+** Copyright (c) 2011 Nokia Corporation and/or its subsidiary(-ies).
+** Copyright (c) 2014 - 2022 Jolla Ltd.
 ** All rights reserved.
 ** Contact: Nokia Corporation (directui@nokia.com)
-** Contact: Raine Makelainen (raine.makelainen@jolla.com)
 **
 ** This file is part of applauncherd
 **
@@ -19,8 +18,8 @@
 **
 ****************************************************************************/
 
-#ifndef BOOSTER_SILICA_H
-#define BOOSTER_SILICA_H
+#ifndef BOOSTER_BROWSER_H
+#define BOOSTER_BROWSER_H
 
 #include "eventhandler.h"
 #include "booster.h"
