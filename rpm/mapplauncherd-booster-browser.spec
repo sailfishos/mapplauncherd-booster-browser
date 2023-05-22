@@ -52,9 +52,6 @@ unset LD_AS_NEEDED
 %install
 %qmake_install
 
-mkdir -p %{buildroot}%{_userunitdir}/user-session.target.wants || true
-ln -s ../booster-browser.service %{buildroot}%{_userunitdir}/user-session.target.wants/
-
 %pre
 groupadd -rf privileged
 
@@ -63,6 +60,4 @@ groupadd -rf privileged
 %license COPYING.LESSER
 %attr(2755, root, privileged) %{_libexecdir}/mapplauncherd/booster-browser
 %{_datadir}/booster-browser/*
-%{_userunitdir}/booster-browser.service
 %{_userunitdir}/booster-browser@.service
-%{_userunitdir}/user-session.target.wants/booster-browser.service
