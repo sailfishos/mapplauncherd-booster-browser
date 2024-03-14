@@ -15,17 +15,13 @@ BuildRequires:  pkgconfig(qdeclarative5-boostable)
 BuildRequires:  pkgconfig(Qt0Feedback)
 BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Sql)
-BuildRequires:  pkgconfig(Qt5Svg)
 BuildRequires:  pkgconfig(Qt5WaylandClient)
-BuildRequires:  pkgconfig(Qt5Xml)
-BuildRequires:  pkgconfig(Qt5XmlPatterns)
 BuildRequires:  pkgconfig(libshadowutils)
 BuildRequires:  pkgconfig(mlite5)
 BuildRequires:  pkgconfig(ngf-qt5)
 BuildRequires:  pkgconfig(gio-2.0)
 BuildRequires:  pkgconfig(gmodule-2.0)
 BuildRequires:  pkgconfig(gobject-2.0)
-BuildRequires:  pkgconfig(timed-qt5)
 BuildRequires:  pkgconfig(systemd)
 
 # Browser booster specific
@@ -56,7 +52,6 @@ unset LD_AS_NEEDED
 groupadd -rf privileged
 
 %files
-%defattr(-,root,root,-)
 %license COPYING.LESSER
 %attr(2755, root, privileged) %{_libexecdir}/mapplauncherd/booster-browser
 %{_datadir}/booster-browser/*
