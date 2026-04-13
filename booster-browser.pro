@@ -5,8 +5,8 @@ QT += qml quick concurrent
 qml.files = qml/preload.qml
 
 CONFIG += link_pkgconfig
-QT += feedback dbus sql waylandclient
-PKGCONFIG += mlite5 gio-2.0 glib-2.0 gmodule-2.0 gobject-2.0 applauncherd
+QT += dbus sql waylandclient
+PKGCONFIG += mlite5 gio-2.0 glib-2.0 gmodule-2.0 gobject-2.0 applauncherd Qt5Feedback
 
 # Not common with silica booster.
 PKGCONFIG += qt5embedwidget
