@@ -25,15 +25,15 @@ BuildRequires:  pkgconfig(gobject-2.0)
 BuildRequires:  pkgconfig(systemd)
 
 # Browser booster specific
-BuildRequires:  pkgconfig(qt5embedwidget) >= 1.53.9
-BuildRequires:  xulrunner-qt5-devel >= 115.35.1
+BuildRequires:  pkgconfig(qt5embedwidget) >= 2.0.0
+BuildRequires:  xulrunner-qt5-devel >= 140.12.0
 
 Requires(pre):  shadow-utils
 Requires:  sailfishsilica-qt5 >= 0.11.55
 Requires:  mapplauncherd >= 4.2.3
 Requires:  systemd-user-session-targets
-Requires:  qtmozembed-qt5 >= 1.53.9
-Requires:  xulrunner-qt5 >= 115.35.1
+Requires:  qtmozembed-qt5 >= 2.0.0
+Requires:  xulrunner-qt5 >= 140.12.0
 
 %description
 %{summary}.
